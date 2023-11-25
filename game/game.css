@@ -26,6 +26,7 @@ button {
     color: #fff;
     border: none;
     cursor: pointer;
+    border-radius: 4px;
 }
 
 #message {
@@ -33,6 +34,12 @@ button {
     font-weight: bold;
     color: #333;
     margin-top: 20px;
+}
+
+.attempts {
+    position: absolute;
+    top: 0;
+    right: 0;
 }
 
 
