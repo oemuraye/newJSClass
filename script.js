@@ -1,3 +1,24 @@
+// Function to set the active link based on the current page URL
+function setActiveLink() {
+    var currentUrl = window.location.pathname;
+    var navLinks = document.querySelectorAll('.nav-link');
+    
+    navLinks.forEach(function(link) {
+        // Remove the 'active' class from all links
+        link.classList.remove('active');
+        
+        // Check if the link's href matches the current URL
+        console.log(link.getAttribute('href'));
+        console.log(currentUrl);
+    if (link.getAttribute('href') === currentUrl) {
+            // Add the 'active' class to the matching link
+        link.classList.add('active');
+      }
+    });
+}
+
+// Call the setActiveLink function when the page loads
+window.addEventListener('load', setActiveLink);
 
 // const greetingText = document.querySelector('h2');
 // // const showGreetingBtn = document.getElementById('show-greeting');
@@ -83,3 +104,4 @@ loginPassword.addEventListener("focus", () => {
     successMsg.textContent = ""
     errorMsg.textContent = ''
 })
+

@@ -49,6 +49,11 @@ header nav {
     font-size: 30px;
 }
 
+.nav-link.active {
+    color: #ff0000; 
+    font-weight: bold; 
+}
+
 @media (max-width: 768px) {
     .hide-in-desktop {
         display: block;
