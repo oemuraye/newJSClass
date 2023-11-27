@@ -90,8 +90,9 @@ const guessInput = document.getElementById('guess');
 const checkBtn = document.getElementById('check'); 
 const messageBox = document.getElementById('message'); 
 const numOfAttempts = document.querySelector('.attempts span'); 
+const resetBtn = document.querySelector('.reset_btn');
 
-const randomNumber = Math.floor(Math.random() * 100) + 1;
+let randomNumber = Math.floor(Math.random() * 100) + 1;
 let attempts = 0;
 
 const showMessage = (messageDisplay) => {
@@ -104,6 +105,8 @@ guessInput.addEventListener('focus', () => {
 
 checkBtn.addEventListener('click', () => {
     const guessInputValue = Number(guessInput.value);
+
+    resetBtn.style.display = 'block';
 
     // validate the input value
     if (guessInputValue === '' || isNaN(guessInputValue) || guessInputValue < 1 || guessInputValue > 100) {
@@ -121,6 +124,7 @@ checkBtn.addEventListener('click', () => {
         // showMessage('Congratulations! You guessed the correct number in ' + attempts + '  attempts')
         showMessage(`Congratulations! You guessed the correct number in ${attempts} attempts`)
         messageBox.style.color = "green";
+        // checkBtn.style.display = 'none';
         checkBtn.disable = true;
     } else {
         attempts++;
@@ -135,6 +139,14 @@ checkBtn.addEventListener('click', () => {
     }
 });
 
+// restart game
+resetBtn.addEventListener('click', () => {
+    randomNumber = Math.floor(Math.random() * 100) + 1;
+    attempts = 0;
+    showMessage('');
+    checkBtn.disable = false;
+    resetBtn.style.display = 'none';
+})
 
 
 // Todo list

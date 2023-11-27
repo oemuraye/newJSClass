@@ -8,8 +8,6 @@ function setActiveLink() {
         link.classList.remove('active');
         
         // Check if the link's href matches the current URL
-        console.log(link.getAttribute('href'));
-        console.log(currentUrl);
     if (link.getAttribute('href') === currentUrl) {
             // Add the 'active' class to the matching link
         link.classList.add('active');
