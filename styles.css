@@ -92,3 +92,18 @@ form .error-msg {
 form .success-msg {
     color: greenyellow;
 }
+
+.hero-section {
+    max-width: 1500px;
+    margin: 0 auto;
+}
+
+.hero-section img {
+    width: 100%;
+    object-fit: cover;
+    margin: 0 auto;
+}
+.flex {
+    display: flex;
+    justify-content: space-around;
+}
