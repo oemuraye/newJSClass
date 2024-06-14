@@ -201,4 +201,17 @@ loginPassword.addEventListener("focus", () => {
 
 
 
+let listOfItemsInClassroom = ['fans', 'chair'];
 
+listOfItemsInClassroom.forEach(item => {
+    console.log(item);
+});
+
+const obj = {
+    name: 'login',
+    aga: 4
+};
+
+Object.keys(obj).forEach((key) => {
+    console.log(key + ': ' + obj[key]);
+});
